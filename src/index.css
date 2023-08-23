@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 94%);
+  min-height: 100vh;
+}
+.main__container {
+  @apply bg-white px-8 py-12 md:px-12 lg:px-16 md:py-16 lg:py-20 rounded-3xl w-[90vw] sm:w-[50rem] md:w-[60rem] lg:w-[70rem] xl:w-[80rem] rounded-br-[10rem]  lg:rounded-br-[15rem];
+}
+
+.input__element {
+  @apply flex items-center justify-between gap-4 md:w-[80%];
+}
+label {
+  @apply block mb-3 uppercase text-xl text-smokey-grey font-extrabold tracking-[3px];
+}
+input {
+  @apply w-full border border-light-grey rounded-lg p-6  text-3xl  lg:text-4xl font-bold text-off-black placeholder:text-light-grey focus:border-purple;
+}
+.input__box {
+  @apply relative;
+}
+.input__box small {
+  @apply text-red-400 text-sm md:text-base lg:md:text-lg absolute bottom-[-1.8rem] left-0;
+}
+.btn__submit {
+  @apply relative text-center my-16 lg:my-8 lg:text-right;
+}
+.btn__submit button {
+  @apply bg-purple rounded-full p-6 w-[6rem] h-[6rem] lg:w-[7rem] lg:h-[7rem] relative z-10;
+}
+.btn__submit img {
+  @apply max-w-full;
+}
+.btn__submit small {
+  @apply absolute h-[2px] bg-light-grey w-full top-1/2 left-0 z-0;
+}
+.output__section span:first-child {
+  @apply text-[6rem] md:text-[6.5rem] lg:text-[7rem] text-purple mr-4 font-black italic tracking-[3px];
+}
+.output__section span:last-child {
+  @apply text-[4.6rem] md:text-[5.6rem] lg:text-[6.5rem] text-off-black font-black italic;
+}
